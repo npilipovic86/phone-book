@@ -353,21 +353,22 @@ var PhoneBookService = /** @class */ (function () {
         this._http = _http;
         this.pbFilterSource$ = new BehaviorSubject_1.BehaviorSubject([]);
         this.pbAddNewSource$ = new BehaviorSubject_1.BehaviorSubject(null);
+        this.path = '/api/phonebook/';
     }
     PhoneBookService.prototype.updatePb = function (pbe) {
         this.pbAddNewSource$.next(pbe);
     };
     PhoneBookService.prototype.getAll = function () {
-        return this._http.get('/api/list');
+        return this._http.get(this.path);
     };
     PhoneBookService.prototype.delete = function (pbe) {
-        return this._http.delete('/api/delete/' + pbe.id);
+        return this._http.delete(this.path + pbe.id);
     };
     PhoneBookService.prototype.addNew = function (pbe) {
-        return this._http.post('api/insert', pbe);
+        return this._http.post(this.path, pbe);
     };
     PhoneBookService.prototype.filter = function (lastName) {
-        return this._http.get('/api/list/' + lastName);
+        return this._http.get(this.path + lastName);
     };
     PhoneBookService = __decorate([
         core_1.Injectable(),

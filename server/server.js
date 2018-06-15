@@ -30,7 +30,7 @@ mysql_pool.getConnection(function (err, connection) {
 });
 
 // This responds a GET request for the /list page.
-app.get('/api/list', function (req, res) {
+app.get('/api/phonebook', function (req, res) {
 	console.log("GET Request :: /list");
 	var data = {
         "error": 1,
@@ -61,7 +61,7 @@ app.get('/api/list', function (req, res) {
 });
 
 //UPDATE record
-app.put('/api/update', function (req, res) {
+app.put('/api/phonebook', function (req, res) {
     var id = req.body.id;
     var firstName = req.body.firstName;
     var lastName = req.body.lastName;
@@ -93,7 +93,7 @@ app.put('/api/update', function (req, res) {
 });
 
  //LIST by lastName
-app.get('/api/list/:lastName', function (req, res) {
+app.get('/api/phonebook/:lastName', function (req, res) {
 	var lastName = req.params.lastName;
 	var data = {
         "error": 1,
@@ -119,8 +119,7 @@ app.get('/api/list/:lastName', function (req, res) {
 });
 
 //INSERT new
-app.post('/api/insert', function (req, res) {
-	var id = req.body.id;
+app.post('/api/phonebook', function (req, res) {
     var firstName = req.body.firstName;
     var lastName = req.body.lastName;
     var number = req.body.number;
@@ -150,7 +149,7 @@ app.post('/api/insert', function (req, res) {
     }
 });
 //DELETE
-app.delete('/api/delete/:id', function (req, res) {
+app.delete('/api/phonebook/:id', function (req, res) {
 	var id = req.params.id;
     var data = {
         "error": 1,
