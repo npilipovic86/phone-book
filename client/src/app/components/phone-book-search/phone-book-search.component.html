@@ -1,0 +1,7 @@
+  <div class="search">
+      <form class="form-inline" (ngSubmit)="filter()"  >
+          <input type="text" oninput="this.value=this.value.replace(/[^a-zA-Z]/g,'');" class="form-control" placeholder='search by last name' #input name="lastName"  type="text" [(ngModel)]="lastName">
+          <button type="submit" name="myButton"  [disabled]="!lastName || filterOn" class="btn  btn-success" (click)="submit">filter</button>
+      </form>
+  </div>
+    <button [disabled]="!lastName" class="btn  btn-danger"  (click)="resetFilter()" value="resetFilter">reset</button>

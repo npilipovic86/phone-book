@@ -1,0 +1,11 @@
+h1 {
+    text-align: center;
+}
+.container {
+    width: 35rem;
+}
+@media screen and (max-width: 670px) {
+    .container{
+        width: 80%;
+    }
+}

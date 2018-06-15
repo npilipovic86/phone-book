@@ -1,0 +1,16 @@
+
+<form class="form" (ngSubmit)="add()" >
+    <div class="form-group">
+        <label>First Name</label>
+        <input placeholder='e.g. Pera' type="text" oninput="this.value=this.value.replace(/[^a-zA-Z]/g,'');" name="firstName" class="form-control" [(ngModel)]="pb.firstName" />
+    </div>
+    <div class="form-group">
+        <label>Last Name</label>
+        <input placeholder='e.g. Peric' type="text" oninput="this.value=this.value.replace(/[^a-zA-Z]/g,'');" name="lastName" class="form-control" [(ngModel)]="pb.lastName" />
+    </div>
+    <div class="form-group">
+        <label>Phone Number</label>
+        <input placeholder='e.g. 011222333' type="text" [ngModelOptions]="{standalone: true}" oninput="this.value=this.value.replace(/[^0-9]/g,'');" class="form-control" [(ngModel)]="pb.number" />
+    </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!pb.firstName || !pb.lastName || !pb.number " >save</button>
+</form>

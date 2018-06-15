@@ -1,0 +1,20 @@
+<div *ngIf="records">
+  <table class="table ">
+    <thead class="thead-light">
+      <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Phone No</th>
+          <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pb of records; ">
+        <td>{{pb.firstName}}</td>
+        <td>{{pb.lastName}}</td>
+        <td>{{pb.number}}</td>
+        <td><img src="assets/trash.png"  (click)="delete(pb)" data-toggle="tooltip" data-placement="top" title="Delete"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

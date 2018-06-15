@@ -1,0 +1,8 @@
+
+body {
+    background-image: url("assets/fon2.jpg");
+    background-repeat: no-repeat;
+    background-size: inherit ;
+    /* background-position: center; */
+    background-color: #cccccc;
+ }
