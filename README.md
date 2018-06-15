@@ -15,4 +15,4 @@ This is simple phone book. Angular 5 - client, Node.js - server, MySql - databas
 
 ## How it look like
 
-![](Screenchot.png)
+![](Screenshot.png)
