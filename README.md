@@ -4,7 +4,7 @@ This is simple phone book. Angular 5 - client, Node.js - server, MySql - databas
 *You have 2 folders*
 - [server](https://github.com/npilipovic86/phone-book/tree/master/server) **Node.js**
 - [client](https://github.com/npilipovic86/phone-book/tree/master/client) **Angular 5**
-- *In [sever/public](https://github.com/npilipovic86/phone-book/tree/master/server/public) is Angular 5 build in application*
+  ps. *In [sever/public](https://github.com/npilipovic86/phone-book/tree/master/server/public) is Angular 5 build in application*
 
 ## Dependencies
 [Node.js](https://nodejs.org/en/), [MySql](https://www.mysql.com/)
