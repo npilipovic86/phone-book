@@ -5,17 +5,17 @@ var con = mysql.createConnection({
 	host: "localhost",
 	user: "root",
   password: "root",
-  database: "db_pb" | ""
+  database: "pb" | ""
   });
   
 con.connect(function(err) {
 	if (err) throw err;
 	console.log("Connected!");
-	con.query("CREATE DATABASE IF NOT EXISTS db_pb;", function (err, result) {
+	con.query("CREATE DATABASE IF NOT EXISTS pb;", function (err, result) {
 	  if (err) throw err;
 	  console.log("Database created");
 	});
-	con.query("use db_pb;", function (err, result) {
+	con.query("use pb;", function (err, result) {
 		if (err) throw err;
       }); 
 	var sql = "CREATE TABLE phonebook (id integer auto_increment, firstName varchar(30), lastName varchar(30), number varchar(30), primary key (id));";

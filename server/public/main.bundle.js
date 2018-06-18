@@ -258,14 +258,14 @@ exports.PhoneBookListComponent = PhoneBookListComponent;
 /***/ "./src/app/components/phone-book-search/phone-book-search.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "input {\n    margin: 5px 5px 5px 0px;  \n}\n\n.search {\n    display: inline-block;\n}\n"
+module.exports = "input {\n    margin: 5px 5px 5px 0px;  \n}\n\n.search {\n    display: inline-block;\n}\n\n.form-inline {\n    display: block;\n}"
 
 /***/ }),
 
 /***/ "./src/app/components/phone-book-search/phone-book-search.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "  <div class=\"search\">\n      <form class=\"form-inline\" (ngSubmit)=\"filter()\"  >\n          <input type=\"text\" oninput=\"this.value=this.value.replace(/[^a-zA-Z]/g,'');\" class=\"form-control\" placeholder='search by last name' #input name=\"lastName\"  type=\"text\" [(ngModel)]=\"lastName\">\n          <button type=\"submit\" name=\"myButton\"  [disabled]=\"!lastName || filterOn\" class=\"btn  btn-success\" (click)=\"submit\">filter</button>\n      </form>\n  </div>\n    <button [disabled]=\"!lastName\" class=\"btn  btn-danger\"  (click)=\"resetFilter()\" value=\"resetFilter\">reset</button>\n"
+module.exports = "  <div class=\"search\">\n      <form class=\"form-inline\" (ngSubmit)=\"filter()\"  >\n          <input type=\"text\" oninput=\"this.value=this.value.replace(/[^a-zA-Z]/g,'');\" class=\"form-control\" placeholder='search by last name' #input name=\"lastName\"  type=\"text\" [(ngModel)]=\"lastName\">\n          <button type=\"submit\"  [disabled]=\"!lastName || filterOn\" class=\"btn  btn-success\" (click)=\"submit\">filter</button>\n      </form>\n  </div>\n  <button  [disabled]=\"!lastName\" class=\"btn btn-danger\"  (click)=\"resetFilter()\" value=\"resetFilter\">reset</button>\n"
 
 /***/ }),
 

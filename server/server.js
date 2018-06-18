@@ -1,8 +1,8 @@
 var express = require('express');
 var app = express();
 var mysql = require('mysql');
-var bodyParser = require("body-parser");
-var open = require("open");
+var bodyParser = require('body-parser');
+var open = require('open');
 
 //STATIC FILES
 app.use(express.static('public'));
@@ -15,7 +15,7 @@ var mysql_pool = mysql.createPool({
 	host     : 'localhost',
 	user     : 'root',
 	password : 'root',
-	database : 'db_pb',
+	database : 'pb',
 });
 
 //TEST CONNECTION

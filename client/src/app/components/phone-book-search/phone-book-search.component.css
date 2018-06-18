@@ -5,3 +5,7 @@ input {
 .search {
     display: inline-block;
 }
+
+.form-inline {
+    display: block;
+}
